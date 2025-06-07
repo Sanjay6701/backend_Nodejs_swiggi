@@ -7,7 +7,7 @@ const firmRoutes=require("./routes/firmRoutes")
 const productRoutes = require("./routes/productRoutes")
 const path=require('path')
 
-const PORT=4002
+const PORT=process.env.PORT || 4002
 const app=express()
 
 dotenv.config()
@@ -28,5 +28,5 @@ app.listen(PORT,()=>{
     console.log(`server running at  ${PORT}`);
 });
 app.use('/home',(req,res)=>{
-    res.send("<h1>home")
+    res.send("<h1>WELCOME SANJAY")
 })
